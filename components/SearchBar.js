@@ -1,5 +1,5 @@
 import { useMemo, useEffect } from "react";
-import debounce from "lodash/debounce";
+import { debounce } from "lodash";
 export default function SearchBar({ value, onChange }) {
     const debouncedChange = useMemo(() => debounce(onChange, 50), [onChange]);
      useEffect(() => {
