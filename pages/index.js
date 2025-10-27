@@ -5,6 +5,7 @@ import Filters from "../components/Filters";
 import SortDropdown from "../components/SortDropdown";
 import Skeleton from "../components/Skeleton";
 import { useSearch } from "../context/SearchContext";
+import Footer from "@/components/Footer";
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -37,14 +38,14 @@ export default function Home() {
   if (sort === "high") filtered.sort((a, b) => b.price - a.price);
 
   return (
-    <div className=" gap-1 mt-10">
+    <div className=" gap-1 mt-10  ">
       <Filters categories={categories} selected={selected} onCategory={toggleCategory} />
       <div className="flex-1 m-3 mainBackground p-4 rounded">
         <div className="flex justify-between mb-4">
           <SortDropdown value={sort} onChange={setSort} />
         </div>
         {loading ? (
-          <div className=" grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="  grid grid-cols-2 md:grid-cols-4 gap-4">
             {Array(8).fill(0).map((_, i) => <Skeleton key={i} />)}
           </div>
         ) : filtered.length === 0 ? (
@@ -64,6 +65,7 @@ export default function Home() {
         )}
       </div>
 
+      <Footer />
       <style jsx>{`
         .mainBackground {
           background-color: #ffffff;

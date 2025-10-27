@@ -5,20 +5,20 @@ export default function Filters({ categories, selected, onCategory }) {
   };
 
   return (
-    <div className="p-1 m-2 mt-2 border border-cyan-100 rounded">
-      <div className="flex items-center justify-between mb-2">
+    <div className="p-1  rounded">
+      <div className="flex  items-center justify-between mb-2">
         {selected.length > 0 && (
           <button
             type="button"
             onClick={clearAll}
-            className="text-sm text-cyan-600 hover:underline"
+            className="text-lg text-cyan-600 hover:underline"
           >
             Clear
           </button>
         )}
       </div>
 
-      <div className="flex flex-wrap justify-around gap-5">
+      <div className="flex flex-wrap justify-center gap-5">
         {categories.map((cat) => {
           const active = selected.includes(cat);
           return (
