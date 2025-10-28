@@ -3,6 +3,10 @@ import { CartProvider } from "../context/CartContext";
 import Navbar from "../components/Navbar";
 import { SearchProvider } from "../context/SearchContext";
 import Footer from "../components/Footer";
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
 
 function MyApp({ Component, pageProps }) {
   return (
