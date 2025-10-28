@@ -1,21 +1,29 @@
 import "../styles/globals.css";
-import { CartProvider } from "../context/CartContext"; // adjust the path
+import { CartProvider } from "../context/CartContext";
 import Navbar from "../components/Navbar";
 import { SearchProvider } from "../context/SearchContext";
+import Footer from "../components/Footer";
+
 function MyApp({ Component, pageProps }) {
   return (
     <CartProvider>
       <SearchProvider>
-              <div className="bg-sky-300 bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)] min-h-screen p-2 md:p-5 lg:p-10">
-        <div className="all min-h-screen bg-white   rounded-3xl">
-         <Navbar />
-      <Component {...pageProps} /> 
-      </div></div>
+        <div className="min-h-screen bg-gradient-to-b from-orange-300 via-orange-200 to-transparent">
+          <div className=" mx-auto px-6 lg:px-8">
+            <Navbar />
+            <main className="mt-8 mb-12 bg-white/5 ">
+              <Component {...pageProps} />
+            </main>
+            <Footer />
+          </div>
+        </div>
       </SearchProvider>
     </CartProvider>
   );
 }
 
 export default MyApp;
+
+
 
 

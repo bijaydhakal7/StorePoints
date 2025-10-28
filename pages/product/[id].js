@@ -31,6 +31,7 @@ export default function ProductDetail() {
 
   return (
     <div className="p-10">
+    <ToastContainer />
       <div className=" flex flex-col md:flex-row gap-10 ">
         <img src={product.image} alt={product.title} className="h-64 object-contain" />
         <div className="flex flex-col justify-center">
@@ -46,7 +47,7 @@ export default function ProductDetail() {
           >
             Add to Cart
           </button>
-          <ToastContainer />
+          
         </div>
       </div>
       <div className="flex flex-col justify-center gap-4  ">

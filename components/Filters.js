@@ -11,7 +11,7 @@ export default function Filters({ categories, selected, onCategory }) {
           <button
             type="button"
             onClick={clearAll}
-            className="text-lg text-cyan-600 hover:underline"
+            className="text-lg text-blue-900 hover:underline"
           >
             Clear
           </button>
@@ -31,7 +31,7 @@ export default function Filters({ categories, selected, onCategory }) {
                 "px-15 py-2 rounded-4xl border transition-colors text-md " +
                 (active
                   ? "bg-cyan-600 text-white border-cyan-600 shadow-sm"
-                  : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50")
+                  : "bg-blue-100 text-slate-700 border-slate-200 hover:bg-slate-50")
               }
             >
               {cat}

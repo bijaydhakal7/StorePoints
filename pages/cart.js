@@ -9,7 +9,7 @@ export default function CartPage() {
   const router = useRouter();
 
   return (
-    <div className="w-full max-w-2xl mx-auto  rounded-3xl p-6 my-8 shadow-md">
+    <div className="w-full max-w-2xl mx-auto min-h-screen  rounded-3xl p-6 my-8 shadow-md">
       <div className="head flex justify-between items-center mb-4">
         <h1 className="text-lg sm:text-xl font-bold">Your Cart</h1>
         <button className="font-bold text-2xl flex items-center text-red-500 cursor-pointer" onClick={()=> router.back()}>X</button>

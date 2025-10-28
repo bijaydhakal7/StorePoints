@@ -8,7 +8,7 @@ export default function Navbar() {
   const { search, setSearch } = useSearch();
 
   return (
-    <nav className="flex flex-col md:flex-row items-center justify-between lg:justify-center lg:gap-30  gap-2 p-3 text-blue-950">
+    <nav className="flex flex-col md:flex-row items-center justify-between lg:justify-center lg:gap-30  gap-2 p-3 text-blue-950 bg-transparent sticky top-0 z-10   ">
       <div className="flex justify-between lg:justify-center lg:gap-70 items-center w-full md:w-auto">
         <Link href="/" className="font-bold text-xl md:text-2xl">
           StorePoint
